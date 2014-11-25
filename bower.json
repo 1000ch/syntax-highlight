@@ -1,0 +1,26 @@
+{
+  "name": "syntax-highlight",
+  "version": "0.1.0",
+  "authors": [
+    "1000ch <shogo.sensui@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "web-components"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "fetch": "~0.3.2",
+    "es6-promise": "~2.0.0",
+    "highlightjs": "~8.3.0"
+  },
+  "devDependencies": {
+    "markdown.css": "~0.1.1"
+  }
+}
