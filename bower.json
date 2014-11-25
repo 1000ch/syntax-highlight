@@ -4,6 +4,7 @@
   "authors": [
     "1000ch <shogo.sensui@gmail.com>"
   ],
+  "homepage": "https://github.com/1000ch/syntax-highlight",
   "license": "MIT",
   "keywords": [
     "web-components"
