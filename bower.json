@@ -1,6 +1,6 @@
 {
   "name": "syntax-highlight",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Code syntax highlight element.",
   "authors": [
     "1000ch <shogo.sensui@gmail.com>"
