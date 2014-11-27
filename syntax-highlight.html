@@ -15,6 +15,7 @@
       font-size: 1em;
     }
   </style>
+  <style id="theme"></style>
   <pre><code><content></content></code></pre>
 </template>
 
@@ -23,6 +24,10 @@
     var currentScript = document.currentScript;
     var ownerDocument = currentScript.ownerDocument;
     var SyntaxHighlightPrototype = Object.create(HTMLElement.prototype);
+
+    function getThemeStylesheetPath (theme) {
+      return 'bower_components/highlightjs/styles/' + theme + '.css';
+    }
 
     SyntaxHighlightPrototype.createdCallback = function () {
 
@@ -37,21 +42,41 @@
 
     SyntaxHighlightPrototype.attachedCallback = function () {
 
-      var style = this.shadowRoot.querySelector('style');
+      var style = this.shadowRoot.querySelector('#theme');
 
       var lang = this.getAttribute('lang');
       var theme = this.getAttribute('theme') || 'default';
-      var path = 'bower_components/highlightjs/styles/' + theme + '.css';
+      var path = getThemeStylesheetPath(theme);
 
       fetch(path).then(function (response) {
         return response.text();
       }).then(function (css) {
-        style.innerHTML += css;
+        style.innerHTML = css;
       });
 
       var code = this.shadowRoot.querySelector('code');
       code.classList.add(lang);
       hljs.highlightBlock(code);
+    };
+
+    SyntaxHighlightPrototype.attributeChangedCallback = function (attributeName, oldValue, newValue) {
+      switch (attributeName) {
+        case 'theme':
+          var style = this.shadowRoot.querySelector('#theme');
+          var path = getThemeStylesheetPath(newValue);
+          fetch(path).then(function (response) {
+            return response.text();
+          }).then(function (css) {
+            style.innerHTML = css;
+          });
+          break;
+        case 'lang':
+          var code = this.shadowRoot.querySelector('code');
+          code.classList.add(oldValue);
+          code.classList.add(newValue);
+          hljs.highlightBlock(code);
+          break;
+      }
     };
 
     return document.registerElement('syntax-highlight', {
