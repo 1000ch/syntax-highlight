@@ -18,10 +18,17 @@
   <body>
     <div class="container">
       <h1>syntax-highlight</h1>
-      <syntax-highlight><script>
+      <h2>HTML (lang=html, theme=default)</h2>
+      <syntax-highlight lang="html" theme="default"><script>
   var foo = 'Hello, <syntax-highlight>!';
 </script>
       </syntax-highlight>
+      <h2>JavaScript (lang=js, theme=monokai)</h2>
+      <syntax-highlight lang="js" theme="monokai">var foo = 'bar';</syntax-highlight>
+      <h2>JavaScript (lang=css, theme=rainbow)</h2>
+      <syntax-highlight lang="css" theme="rainbow">.foo {
+  display: block;
+}</syntax-highlight>
     </div>
   </body>
 </html>

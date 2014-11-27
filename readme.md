@@ -29,6 +29,14 @@ Put `<syntax-highlight>` tag including code.
 
 Specify the code language.
 
+http://highlightjs.readthedocs.org/en/latest/css-classes-reference.html
+
+### `theme=<String>`
+
+Select highlight theme. 
+
+https://highlightjs.org/static/demo/
+
 ## License
 
 MIT

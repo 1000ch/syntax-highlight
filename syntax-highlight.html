@@ -1,7 +1,6 @@
 <script src="bower_components/es6-promise/promise.min.js"></script>
 <script src="bower_components/fetch/fetch.js"></script>
 <script src="bower_components/highlightjs/highlight.pack.js"></script>
-<link rel="stylesheet" href="bower_components/highlightjs/styles/default.css">
 
 <template id='template-syntax-highlight'>
   <style>
@@ -27,7 +26,6 @@
 
   SyntaxHighlightPrototype.createdCallback = function () {
 
-    // 別途保持する
     var originalHTML = this.innerHTML;
 
     this.shadowRoot = this.createShadowRoot();
@@ -40,16 +38,19 @@
   SyntaxHighlightPrototype.attachedCallback = function () {
 
     var style = this.shadowRoot.querySelector('style');
-    var link = ownerDocument.querySelector('link[rel="stylesheet"]');
 
-    fetch(link.href).then(function (response) {
+    var lang = this.getAttribute('lang');
+    var theme = this.getAttribute('theme') || 'default';
+    var path = 'bower_components/highlightjs/styles/' + theme + '.css';
+
+    fetch(path).then(function (response) {
       return response.text();
     }).then(function (css) {
       style.innerHTML += css;
     });
 
     var code = this.shadowRoot.querySelector('code');
-    code.classList.add(this.getAttribute('lang'));
+    code.classList.add(lang);
     hljs.highlightBlock(code);
   };
 
