@@ -13,22 +13,71 @@
         max-width: 960px;
       }
     </style>
+    <link rel="import" href="bower_components/paper-radio-group/paper-radio-group.html">
     <link rel="import" href="syntax-highlight.html">
   </head>
   <body>
     <div class="container">
       <h1>syntax-highlight</h1>
-      <h2>HTML (lang=html, theme=default)</h2>
+      <paper-radio-group selected="default">
+        <paper-radio-button name="arta" label="Arta"></paper-radio-button>
+        <paper-radio-button name="ascetic" label="Ascetic"></paper-radio-button>
+        <paper-radio-button name="color-brewer" label="Color Brewer"></paper-radio-button>
+        <paper-radio-button name="docco" label="Docco"></paper-radio-button>
+        <paper-radio-button name="dark" label="Dark"></paper-radio-button>
+        <paper-radio-button name="default" label="Default"></paper-radio-button>
+        <paper-radio-button name="far" label="Far"></paper-radio-button>
+        <paper-radio-button name="foundation" label="Foundation"></paper-radio-button>
+        <paper-radio-button name="github" label="GitHub"></paper-radio-button>
+        <paper-radio-button name="googlecode" label="Google Code"></paper-radio-button>
+        <paper-radio-button name="hybrid" label="Hybrid"></paper-radio-button>
+        <paper-radio-button name="idea" label="Idea"></paper-radio-button>
+        <paper-radio-button name="magula" label="Magula"></paper-radio-button>
+        <paper-radio-button name="monokai" label="Monokai"></paper-radio-button>
+        <paper-radio-button name="monokai_sublime" label="Monokai Sublime"></paper-radio-button>
+        <paper-radio-button name="obsidian" label="Obsidian"></paper-radio-button>
+        <paper-radio-button name="paraiso.dark" label="Paraiso Dark"></paper-radio-button>
+        <paper-radio-button name="paraiso.light" label="Paraiso Light"></paper-radio-button>
+        <paper-radio-button name="pojoaque" label="Pojoaque"></paper-radio-button>
+        <paper-radio-button name="railscasts" label="RailsCasts"></paper-radio-button>
+        <paper-radio-button name="school_book" label="School Book"></paper-radio-button>
+        <paper-radio-button name="rainbow" label="Rainbow"></paper-radio-button>
+        <paper-radio-button name="solarized_dark" label="Solarized Dark"></paper-radio-button>
+        <paper-radio-button name="solarized_light" label="Solarized Light"></paper-radio-button>
+        <paper-radio-button name="sunburst" label="SunBurst"></paper-radio-button>
+        <paper-radio-button name="tomorrow" label="Tomorrow"></paper-radio-button>
+        <paper-radio-button name="tomorrow-night" label="Tomorrow Night"></paper-radio-button>
+        <paper-radio-button name="tomorrow-night-blue" label="Tomorrow Night Blue"></paper-radio-button>
+        <paper-radio-button name="tomorrow-night-bright" label="Tomorrow Night Bright"></paper-radio-button>
+        <paper-radio-button name="tomorrow-night-eighties" label="Tomorrow Night Eighties"></paper-radio-button>
+        <paper-radio-button name="vs" label="VS"></paper-radio-button>
+        <paper-radio-button name="xcode" label="Xcode"></paper-radio-button>
+        <paper-radio-button name="zenburn" label="Zenburn"></paper-radio-button>
+      </paper-radio-group>
+      <h2>HTML</h2>
       <syntax-highlight lang="html" theme="default"><script>
   var foo = 'Hello, <syntax-highlight>!';
 </script>
       </syntax-highlight>
-      <h2>JavaScript (lang=js, theme=monokai)</h2>
-      <syntax-highlight lang="js" theme="monokai">var foo = 'bar';</syntax-highlight>
-      <h2>JavaScript (lang=css, theme=rainbow)</h2>
-      <syntax-highlight lang="css" theme="rainbow">.foo {
+      <h2>CSS</h2>
+      <syntax-highlight lang="css" theme="default">.foo {
   display: block;
 }</syntax-highlight>
+      <h2>JavaScript</h2>
+      <syntax-highlight lang="js" theme="default">var foo = 'bar';</syntax-highlight>
+      <script>
+
+        var elements = document.getElementsByTagName('syntax-highlight');
+        var radioGroup = document.querySelector('paper-radio-group');
+
+        radioGroup.addEventListener('core-select', function (e) {
+          if (e.detail.isSelected) {
+            for (var i = 0, l = elements.length; i < l;i++) {
+              elements[i].theme = this.selected;
+            }
+          }
+        });
+      </script>
     </div>
   </body>
 </html>
