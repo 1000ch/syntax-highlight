@@ -25,6 +25,28 @@
     var ownerDocument = currentScript.ownerDocument;
     var SyntaxHighlightPrototype = Object.create(HTMLElement.prototype);
 
+    Object.defineProperty(SyntaxHighlightPrototype, 'lang', {
+      configurable: false,
+      enumerable: false,
+      get: function () {
+        return this.getAttribute('lang');
+      },
+      set: function (newValue) {
+        this.setAttribute('lang', newValue);
+      }
+    });
+
+    Object.defineProperty(SyntaxHighlightPrototype, 'theme', {
+      configurable: false,
+      enumerable: false,
+      get: function () {
+        return this.getAttribute('theme');
+      },
+      set: function (newValue) {
+        this.setAttribute('theme', newValue);
+      }
+    });
+
     function getThemeStylesheetPath (theme) {
       return 'bower_components/highlightjs/styles/' + theme + '.css';
     }
