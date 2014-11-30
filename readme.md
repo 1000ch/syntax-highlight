@@ -4,6 +4,20 @@
 
 Code syntax highlight element.
 
+## Install
+
+Using [npm](https://www.npmjs.org/package/syntax-highlight):
+
+```sh
+$ npm install syntax-highlight
+```
+
+Using [bower](http://bower.io/search/?q=syntax-highlight):
+
+```bash
+$ bower install syntax-highlight
+```
+
 ## Usage
 
 Import `syntax-highlight.html`.
