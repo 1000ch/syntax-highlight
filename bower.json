@@ -1,6 +1,6 @@
 {
   "name": "syntax-highlight",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Code syntax highlight element.",
   "main": "syntax-highlight.html",
   "authors": [
