@@ -20,8 +20,10 @@
 
 <script>
   window.SyntaxHighlight = (function () {
+
     var currentScript = document.currentScript;
     var ownerDocument = currentScript.ownerDocument;
+    var root = new URL(ownerDocument.baseURI);
     var SyntaxHighlightPrototype = Object.create(HTMLElement.prototype);
 
     Object.defineProperty(SyntaxHighlightPrototype, 'lang', {
@@ -47,7 +49,8 @@
     });
 
     function getThemeStylesheetPath (theme) {
-      return '../highlightjs/styles/' + theme + '.css';
+      var css = new URL('../highlightjs/styles/' + theme + '.css', root);
+      return css.href;
     }
 
     SyntaxHighlightPrototype.createdCallback = function () {
