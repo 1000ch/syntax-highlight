@@ -1,6 +1,6 @@
 {
   "name": "syntax-highlight",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Code syntax highlight element.",
   "scripts": {
     "start": "python -m http.server"
