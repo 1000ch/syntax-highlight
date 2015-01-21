@@ -6,78 +6,85 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <link rel="stylesheet" href="bower_components/markdown.css/markdown.css">
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Source+Code+Pro' type='text/css'>
+    <link rel="import" href="bower_components/core-selector/core-selector.html">
+    <link rel="import" href="bower_components/paper-item/paper-item.html">
+    <link rel="import" href="bower_components/paper-shadow/paper-shadow.html">
+    <link rel="import" href="bower_components/syntax-highlight/syntax-highlight.html">
     <style>
-      .container {
-        margin: 0 auto;
-        min-width: 320px;
-        max-width: 960px;
+      syntax-highlight::shadow code {
+        font-family: 'Source Code Pro';
       }
     </style>
-    <link rel="import" href="bower_components/paper-radio-group/paper-radio-group.html">
-    <link rel="import" href="bower_components/syntax-highlight/syntax-highlight.html">
   </head>
   <body>
-    <div class="container">
-      <h1>syntax-highlight</h1>
-      <paper-radio-group selected="default">
-        <paper-radio-button name="arta" label="Arta"></paper-radio-button>
-        <paper-radio-button name="ascetic" label="Ascetic"></paper-radio-button>
-        <paper-radio-button name="color-brewer" label="Color Brewer"></paper-radio-button>
-        <paper-radio-button name="docco" label="Docco"></paper-radio-button>
-        <paper-radio-button name="dark" label="Dark"></paper-radio-button>
-        <paper-radio-button name="default" label="Default"></paper-radio-button>
-        <paper-radio-button name="far" label="Far"></paper-radio-button>
-        <paper-radio-button name="foundation" label="Foundation"></paper-radio-button>
-        <paper-radio-button name="github" label="GitHub"></paper-radio-button>
-        <paper-radio-button name="googlecode" label="Google Code"></paper-radio-button>
-        <paper-radio-button name="hybrid" label="Hybrid"></paper-radio-button>
-        <paper-radio-button name="idea" label="Idea"></paper-radio-button>
-        <paper-radio-button name="magula" label="Magula"></paper-radio-button>
-        <paper-radio-button name="monokai" label="Monokai"></paper-radio-button>
-        <paper-radio-button name="monokai_sublime" label="Monokai Sublime"></paper-radio-button>
-        <paper-radio-button name="obsidian" label="Obsidian"></paper-radio-button>
-        <paper-radio-button name="paraiso.dark" label="Paraiso Dark"></paper-radio-button>
-        <paper-radio-button name="paraiso.light" label="Paraiso Light"></paper-radio-button>
-        <paper-radio-button name="pojoaque" label="Pojoaque"></paper-radio-button>
-        <paper-radio-button name="railscasts" label="RailsCasts"></paper-radio-button>
-        <paper-radio-button name="school_book" label="School Book"></paper-radio-button>
-        <paper-radio-button name="rainbow" label="Rainbow"></paper-radio-button>
-        <paper-radio-button name="solarized_dark" label="Solarized Dark"></paper-radio-button>
-        <paper-radio-button name="solarized_light" label="Solarized Light"></paper-radio-button>
-        <paper-radio-button name="sunburst" label="SunBurst"></paper-radio-button>
-        <paper-radio-button name="tomorrow" label="Tomorrow"></paper-radio-button>
-        <paper-radio-button name="tomorrow-night" label="Tomorrow Night"></paper-radio-button>
-        <paper-radio-button name="tomorrow-night-blue" label="Tomorrow Night Blue"></paper-radio-button>
-        <paper-radio-button name="tomorrow-night-bright" label="Tomorrow Night Bright"></paper-radio-button>
-        <paper-radio-button name="tomorrow-night-eighties" label="Tomorrow Night Eighties"></paper-radio-button>
-        <paper-radio-button name="vs" label="VS"></paper-radio-button>
-        <paper-radio-button name="xcode" label="Xcode"></paper-radio-button>
-        <paper-radio-button name="zenburn" label="Zenburn"></paper-radio-button>
-      </paper-radio-group>
-      <h2>HTML</h2>
-      <syntax-highlight lang="html" theme="default"><script>
+    <div horizontal layout style="padding: 20px;">
+      <paper-shadow z="2">
+        <core-selector id="theme-selector" selected="default">
+          <paper-item name="arta">Arta</paper-item>
+          <paper-item name="ascetic">Ascetic</paper-item>
+          <paper-item name="color-brewer">Color Brewer</paper-item>
+          <paper-item name="docco">Docco</paper-item>
+          <paper-item name="dark">Dark</paper-item>
+          <paper-item name="default">Default</paper-item>
+          <paper-item name="far">Far</paper-item>
+          <paper-item name="foundation">Foundation</paper-item>
+          <paper-item name="github">GitHub</paper-item>
+          <paper-item name="googlecode">Google Code</paper-item>
+          <paper-item name="hybrid">Hybrid</paper-item>
+          <paper-item name="idea">Idea</paper-item>
+          <paper-item name="magula">Magula</paper-item>
+          <paper-item name="monokai">Monokai</paper-item>
+          <paper-item name="monokai_sublime">Monokai Sublime</paper-item>
+          <paper-item name="obsidian">Obsidian</paper-item>
+          <paper-item name="paraiso.dark">Paraiso Dark</paper-item>
+          <paper-item name="paraiso.light">Paraiso Light</paper-item>
+          <paper-item name="pojoaque">Pojoaque</paper-item>
+          <paper-item name="railscasts">RailsCasts</paper-item>
+          <paper-item name="school_book">School Book</paper-item>
+          <paper-item name="rainbow">Rainbow</paper-item>
+          <paper-item name="solarized_dark">Solarized Dark</paper-item>
+          <paper-item name="solarized_light">Solarized Light</paper-item>
+          <paper-item name="sunburst">SunBurst</paper-item>
+          <paper-item name="tomorrow">Tomorrow</paper-item>
+          <paper-item name="tomorrow-night">Tomorrow Night</paper-item>
+          <paper-item name="tomorrow-night-blue">Tomorrow Night Blue</paper-item>
+          <paper-item name="tomorrow-night-bright">Tomorrow Night Bright</paper-item>
+          <paper-item name="tomorrow-night-eighties">Tomorrow Night Eighties</paper-item>
+          <paper-item name="vs">VS</paper-item>
+          <paper-item name="xcode">Xcode</paper-item>
+          <paper-item name="zenburn">Zenburn</paper-item>
+        </core-selector>
+      </paper-shadow>
+      <div flex style="padding: 40px;">
+        <h1>syntax-highlight</h1>
+        <h2>HTML</h2>
+<syntax-highlight lang="html" theme="default"><script>
   var foo = 'Hello, <syntax-highlight>!';
-</script>
-      </syntax-highlight>
-      <h2>CSS</h2>
-      <syntax-highlight lang="css" theme="default">.foo {
+</script></syntax-highlight>
+        <h2>CSS</h2>
+<syntax-highlight lang="css" theme="default">.foo {
   display: block;
 }</syntax-highlight>
-      <h2>JavaScript</h2>
-      <syntax-highlight lang="js" theme="default">var foo = 'bar';</syntax-highlight>
-      <script>
-
+        <h2>JavaScript</h2>
+<syntax-highlight lang="js" theme="default">var foo = function () {
+  return 'bar';
+};</syntax-highlight>
+      </div>
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
         var elements = document.getElementsByTagName('syntax-highlight');
-        var radioGroup = document.querySelector('paper-radio-group');
+        var themeSelector = document.querySelector('#theme-selector');
 
-        radioGroup.addEventListener('core-select', function (e) {
+        themeSelector.addEventListener('core-select', function (e) {
           if (e.detail.isSelected) {
             for (var i = 0, l = elements.length; i < l;i++) {
               elements[i].theme = this.selected;
             }
           }
         });
-      </script>
-    </div>
+      });
+    </script>
   </body>
 </html>
