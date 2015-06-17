@@ -1,6 +1,5 @@
 {
   "name": "syntax-highlight",
-  "version": "0.1.7",
   "description": "Code syntax highlight element.",
   "main": "syntax-highlight.html",
   "authors": [
@@ -19,13 +18,11 @@
     "tests"
   ],
   "dependencies": {
-    "fetch": "~0.3.2",
-    "highlightjs": "~8.3.0"
+    "highlightjs": "8.5"
   },
   "devDependencies": {
-    "markdown.css": "~0.1.1",
-    "syntax-highlight": "~0.1.6",
-    "paper-item": "Polymer/paper-item#~0.5.2",
-    "paper-shadow": "Polymer/paper-shadow#~0.5.2"
+    "syntax-highlight": "*",
+    "primer-css": "~2.2.1",
+    "primer-markdown": "~2.1.7"
   }
 }

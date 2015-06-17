@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <link rel="stylesheet" href="bower_components/markdown.css/markdown.css">
+    <link rel="stylesheet" href="./bower_components/primer-css/css/primer.css">
+    <link rel="stylesheet" href="./bower_components/primer-markdown/dist/user-content.min.css">
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Source+Code+Pro' type='text/css'>
-    <link rel="import" href="vulcanized.html">
     <link rel="import" href="bower_components/syntax-highlight/syntax-highlight.html">
     <style>
       syntax-highlight::shadow code {
@@ -16,46 +16,47 @@
     </style>
   </head>
   <body>
-    <div horizontal layout style="padding: 20px;">
-      <paper-shadow z="2">
-        <core-selector id="theme-selector" selected="default">
-          <paper-item name="arta">Arta</paper-item>
-          <paper-item name="ascetic">Ascetic</paper-item>
-          <paper-item name="color-brewer">Color Brewer</paper-item>
-          <paper-item name="docco">Docco</paper-item>
-          <paper-item name="dark">Dark</paper-item>
-          <paper-item name="default">Default</paper-item>
-          <paper-item name="far">Far</paper-item>
-          <paper-item name="foundation">Foundation</paper-item>
-          <paper-item name="github">GitHub</paper-item>
-          <paper-item name="googlecode">Google Code</paper-item>
-          <paper-item name="hybrid">Hybrid</paper-item>
-          <paper-item name="idea">Idea</paper-item>
-          <paper-item name="magula">Magula</paper-item>
-          <paper-item name="monokai">Monokai</paper-item>
-          <paper-item name="monokai_sublime">Monokai Sublime</paper-item>
-          <paper-item name="obsidian">Obsidian</paper-item>
-          <paper-item name="paraiso.dark">Paraiso Dark</paper-item>
-          <paper-item name="paraiso.light">Paraiso Light</paper-item>
-          <paper-item name="pojoaque">Pojoaque</paper-item>
-          <paper-item name="railscasts">RailsCasts</paper-item>
-          <paper-item name="school_book">School Book</paper-item>
-          <paper-item name="rainbow">Rainbow</paper-item>
-          <paper-item name="solarized_dark">Solarized Dark</paper-item>
-          <paper-item name="solarized_light">Solarized Light</paper-item>
-          <paper-item name="sunburst">SunBurst</paper-item>
-          <paper-item name="tomorrow">Tomorrow</paper-item>
-          <paper-item name="tomorrow-night">Tomorrow Night</paper-item>
-          <paper-item name="tomorrow-night-blue">Tomorrow Night Blue</paper-item>
-          <paper-item name="tomorrow-night-bright">Tomorrow Night Bright</paper-item>
-          <paper-item name="tomorrow-night-eighties">Tomorrow Night Eighties</paper-item>
-          <paper-item name="vs">VS</paper-item>
-          <paper-item name="xcode">Xcode</paper-item>
-          <paper-item name="zenburn">Zenburn</paper-item>
-        </core-selector>
-      </paper-shadow>
-      <div flex style="padding: 40px;">
-        <h1>syntax-highlight</h1>
+    <div class="container">
+      <div class="columns">
+        <div class="one-fourth column">
+          <nav id="theme" class="menu">
+            <a class="menu-item" href="javascript:void(0);" data-theme="arta">Arta</a>
+            <a class="menu-item" href="javascript:void(0);" data-theme="ascetic">Ascetic</a>
+            <a class="menu-item" href="javascript:void(0);" data-theme="color-brewer">Color Brewer</a>
+            <a class="menu-item" href="javascript:void(0);" data-theme="docco">Docco</a>
+            <a class="menu-item" href="javascript:void(0);" data-theme="dark">Dark</a>
+            <a class="menu-item" href="javascript:void(0);" data-theme="default">Default</a>
+            <a class="menu-item" href="javascript:void(0);" data-theme="far">Far</a>
+            <a class="menu-item" href="javascript:void(0);" data-theme="foundation">Foundation</a>
+            <a class="menu-item" href="javascript:void(0);" data-theme="github">GitHub</a>
+            <a class="menu-item" href="javascript:void(0);" data-theme="googlecode">Google Code</a>
+            <a class="menu-item" href="javascript:void(0);" data-theme="hybrid">Hybrid</a>
+            <a class="menu-item" href="javascript:void(0);" data-theme="idea">Idea</a>
+            <a class="menu-item" href="javascript:void(0);" data-theme="magula">Magula</a>
+            <a class="menu-item" href="javascript:void(0);" data-theme="monokai">Monokai</a>
+            <a class="menu-item" href="javascript:void(0);" data-theme="monokai_sublime">Monokai Sublime</a>
+            <a class="menu-item" href="javascript:void(0);" data-theme="obsidian">Obsidian</a>
+            <a class="menu-item" href="javascript:void(0);" data-theme="paraiso.dark">Paraiso Dark</a>
+            <a class="menu-item" href="javascript:void(0);" data-theme="paraiso.light">Paraiso Light</a>
+            <a class="menu-item" href="javascript:void(0);" data-theme="pojoaque">Pojoaque</a>
+            <a class="menu-item" href="javascript:void(0);" data-theme="railscasts">RailsCasts</a>
+            <a class="menu-item" href="javascript:void(0);" data-theme="school_book">School Book</a>
+            <a class="menu-item" href="javascript:void(0);" data-theme="rainbow">Rainbow</a>
+            <a class="menu-item" href="javascript:void(0);" data-theme="solarized_dark">Solarized Dark</a>
+            <a class="menu-item" href="javascript:void(0);" data-theme="solarized_light">Solarized Light</a>
+            <a class="menu-item" href="javascript:void(0);" data-theme="sunburst">SunBurst</a>
+            <a class="menu-item" href="javascript:void(0);" data-theme="tomorrow">Tomorrow</a>
+            <a class="menu-item" href="javascript:void(0);" data-theme="tomorrow-night">Tomorrow Night</a>
+            <a class="menu-item" href="javascript:void(0);" data-theme="tomorrow-night-blue">Tomorrow Night Blue</a>
+            <a class="menu-item" href="javascript:void(0);" data-theme="tomorrow-night-bright">Tomorrow Night Bright</a>
+            <a class="menu-item" href="javascript:void(0);" data-theme="tomorrow-night-eighties">Tomorrow Night Eighties</a>
+            <a class="menu-item" href="javascript:void(0);" data-theme="vs">VS</a>
+            <a class="menu-item" href="javascript:void(0);" data-theme="xcode">Xcode</a>
+            <a class="menu-item" href="javascript:void(0);" data-theme="zenburn">Zenburn</a>
+          </nav>
+        </div>
+        <div class="three-fourths column markdown-body">
+          <h1>syntax-highlight</h1>
         <h2>HTML</h2>
 <syntax-highlight lang="html" theme="default"><script>
   var foo = 'Hello, <syntax-highlight>!';
@@ -68,20 +69,23 @@
 <syntax-highlight lang="js" theme="default">var foo = function () {
   return 'bar';
 };</syntax-highlight>
+        </div>
       </div>
     </div>
     <script>
       document.addEventListener('DOMContentLoaded', function () {
         var elements = document.getElementsByTagName('syntax-highlight');
-        var themeSelector = document.querySelector('#theme-selector');
+        var theme = document.querySelector('#theme');
+        var themes = theme.getElementsByClassName('menu-item');
 
-        themeSelector.addEventListener('core-select', function (e) {
-          if (e.detail.isSelected) {
+        for (var i = 0; i < themes.length; i++) {
+          themes[i].addEventListener('click', function () {
+            var theme = this.getAttribute('data-theme');
             for (var i = 0, l = elements.length; i < l;i++) {
-              elements[i].theme = this.selected;
+              elements[i].theme = theme;
             }
-          }
-        });
+          });
+        }
       });
     </script>
   </body>
