@@ -21,7 +21,7 @@
     "highlightjs": "8.5"
   },
   "devDependencies": {
-    "syntax-highlight": "~0.1.6",
+    "syntax-highlight": "*",
     "primer-css": "~2.2.1",
     "primer-markdown": "~2.1.7"
   }
