@@ -24,8 +24,7 @@
 }
 
 .hljs-comment,
-.hljs-chunk,
-.hljs-template_comment {
+.hljs-chunk {
   color: #738191;
 }
 
@@ -41,7 +40,8 @@
 .hljs-argument,
 .hljs-link_label,
 .hljs-blockquote,
-.hljs-header {
+.hljs-header,
+.hljs-name {
   color: #0048ab;
 }
 

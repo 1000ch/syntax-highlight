@@ -75,7 +75,8 @@ Monokai style - ported by Luigi Maselli - http://grigio.org
 .apache .hljs-tag,
 .apache .hljs-cbracket,
 .tex .hljs-command,
-.hljs-prompt {
+.hljs-prompt,
+.hljs-name {
   color: #a6e22e;
 }
 
@@ -85,7 +86,6 @@ Monokai style - ported by Luigi Maselli - http://grigio.org
 .hljs-blockquote,
 .hljs-horizontal_rule,
 .hljs-decorator,
-.hljs-template_comment,
 .hljs-pi,
 .hljs-doctype,
 .hljs-deletion,

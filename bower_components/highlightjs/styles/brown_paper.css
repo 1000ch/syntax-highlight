@@ -35,7 +35,7 @@ Brown Paper style from goldblog.com.ua (c) Zaripov Yura <yur4ik7@ukr.net>
 .hljs-title,
 .hljs-type,
 .hljs-tag .hljs-value,
-.css .hljs-rules .hljs-value,
+.css .hljs-rule .hljs-value,
 .hljs-preprocessor,
 .hljs-pragma,
 .ruby .hljs-symbol,
@@ -57,14 +57,14 @@ Brown Paper style from goldblog.com.ua (c) Zaripov Yura <yur4ik7@ukr.net>
 .hljs-envvar,
 .apache .hljs-tag,
 .apache .hljs-cbracket,
-.tex .hljs-number {
+.tex .hljs-number,
+.hljs-name {
   color: #2c009f;
 }
 
 .hljs-comment,
 .hljs-annotation,
 .hljs-decorator,
-.hljs-template_comment,
 .hljs-pi,
 .hljs-doctype,
 .hljs-deletion,

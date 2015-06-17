@@ -40,7 +40,7 @@ pre{
 .hljs-title,
 .hljs-type,
 .hljs-tag .hljs-value,
-.css .hljs-rules .hljs-value,
+.css .hljs-rule .hljs-value,
 .hljs-preprocessor,
 .hljs-pragma,
 .ruby .hljs-symbol,
@@ -64,14 +64,14 @@ pre{
 .apache .hljs-cbracket,
 .nginx .hljs-built_in,
 .tex .hljs-command,
-.coffeescript .hljs-attribute {
+.coffeescript .hljs-attribute,
+.hljs-name {
   color: #2c009f;
 }
 
 .hljs-comment,
 .hljs-annotation,
 .hljs-decorator,
-.hljs-template_comment,
 .hljs-pi,
 .hljs-doctype,
 .hljs-deletion,
