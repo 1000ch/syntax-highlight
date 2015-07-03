@@ -8,6 +8,7 @@
   "homepage": "https://github.com/1000ch/syntax-highlight",
   "license": "MIT",
   "keywords": [
+    "WebComponents",
     "web-components"
   ],
   "ignore": [
